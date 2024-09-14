@@ -1,0 +1,13 @@
+.vscode
+.devcontainer
+build
+sdkconfig.*
+managed_components
+.clangd
+.cproject
+.project
+*.lock
+.venv
+bme680_esp32s3
+bme680_non_bsec
+*.log

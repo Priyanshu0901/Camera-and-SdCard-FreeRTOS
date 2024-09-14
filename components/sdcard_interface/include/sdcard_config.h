@@ -1,0 +1,6 @@
+#define PIN_NUM_MISO  GPIO_NUM_8
+#define PIN_NUM_MOSI  GPIO_NUM_9   
+#define PIN_NUM_CLK   GPIO_NUM_7
+#define PIN_NUM_CS    GPIO_NUM_21
+
+#define MAX_CHAR_SIZE 64
