@@ -122,21 +122,12 @@ void saveJpegToSdcard(camera_fb_t *captureImage)
 
     // Find the next available filename
     char filename[32];
-    uint16_t file_num = lastKnownFile;
-    while (1)
-    {
-        sprintf(filename, "%s/%u_img.jpg", mount_point, file_num++);
-        struct stat st;
-        if (stat(filename, &st) != 0)
-        {
-            lastKnownFile = file_num;
-            break;
-        }
-    }
+
+    sprintf(filename, "%s/%u_img.jpg", mount_point, lastKnownFile++);
 
     // Create the file and write the JPEG data
     FILE *fp = fopen(filename, "wb");
-    if (fp !=NULL)
+    if (fp != NULL)
     {
         fwrite(captureImage->buf, 1, captureImage->len, fp);
         fclose(fp);
