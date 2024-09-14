@@ -20,4 +20,5 @@
 #define PCLK_GPIO_NUM     13
 
 #define LED_GPIO_NUM      21
-#endif
+
+#endif //CAMERA_CONFIG_H
